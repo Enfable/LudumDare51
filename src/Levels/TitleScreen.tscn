@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Fonts/manaspace/manaspace32.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/Levels/TitleScreen.gd" type="Script" id=2]
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0196078, 0.00392157, 0.168627, 1 )
+
+[node name="StartGame" type="Button" parent="."]
+margin_left = 304.0
+margin_top = 96.0
+margin_right = 984.0
+margin_bottom = 304.0
+custom_fonts/font = ExtResource( 1 )
+text = "START GAME"
+
+[node name="Options" type="Button" parent="."]
+margin_left = 304.0
+margin_top = 376.0
+margin_right = 984.0
+margin_bottom = 576.0
+custom_fonts/font = ExtResource( 1 )
+text = "CONTROLS"
+
+[connection signal="pressed" from="StartGame" to="." method="_on_StartGame_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]

@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Fonts/manaspace/manaspace32.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/Levels/ControlsScene.gd" type="Script" id=2]
+
+[node name="ControlsScene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0392157, 0.372549, 0.152941, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 40.0
+margin_top = 32.0
+margin_right = 1256.0
+margin_bottom = 554.0
+custom_fonts/font = ExtResource( 1 )
+text = "Every 10 seconds 3 things will happen
+  You draw 3 cards
+  Enemies will perform an action
+  A new enemy will spawn
+
+Drag your cards onto the player to use them
+
+Use your cards to take on an endless number of opponents 
+
+You will always target the closest enemy with single target attacks
+
+Enemies get tougher as time passes
+
+Only the mouse is needed to play this game"
+autowrap = true
+
+[node name="MainMenu" type="Button" parent="."]
+margin_left = 456.0
+margin_top = 584.0
+margin_right = 760.0
+margin_bottom = 672.0
+custom_fonts/font = ExtResource( 1 )
+text = "Main Menu"
+
+[connection signal="pressed" from="MainMenu" to="." method="_on_MainMenu_pressed"]
